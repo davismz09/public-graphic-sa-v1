@@ -337,6 +337,10 @@ footer {
     transition: 0.4s ease all;
 }
 
+.whatsapp-icon.inactive {
+    bottom: -100%;
+}
+
 .capa--opacity {
     visibility: hidden;
     width: 0;
@@ -350,7 +354,6 @@ footer {
     visibility: initial;
     width: 100%;
     height: 100vh;
-    background-color: #000000a3;
     transition: 0.4s ease all;
 }
 
@@ -384,27 +387,27 @@ footer {
 }
 
 .menuMobile {
-    width: 0;
-    height: 100vh;
-    transition: 0.4s;
-    z-index: 1;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-.menuMobile.active {
     width: 40%;
-    color: #fff;
+    height: 100vh;
     font-size: 14px;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     position: fixed;
+    right: -100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    cursor: pointer;
+    color: #fff;
+    transition: 0.5s ease-in-out all;
+}
+
+.menuMobile.active {
     top: 0;
-    transition: 0.4s;
+    right: 0;
+    transition: 0.5s ease all;
 }
 
 /* Estilos para pantallas de hasta 900px */
