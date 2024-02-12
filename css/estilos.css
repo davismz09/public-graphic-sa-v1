@@ -18,6 +18,8 @@
 
 body {
     font-family: 'Nexa', sans-serif;
+    font-family: 'Nexa', sans-serif;
+    color: rgb(60, 60, 62);
     /* Usa la fuente Nexa en tu página */
 }
 
@@ -25,11 +27,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Nexa', sans-serif;
-    color: rgb(60, 60, 62);
 }
 
 .contenedor {
@@ -103,11 +100,12 @@ nav>a {
     font-weight: bolder;
     text-decoration: none;
     align-self: center;
+    text-align: center;
     text-transform: uppercase;
 }
 
 nav>a:hover {
-    text-decoration: underline;
+    color: rgba(164, 164, 164, 0.727);
 }
 
 .barrita {
@@ -391,66 +389,19 @@ footer {
     transition: 0.2s ease all;
 }
 
-.capa--opacity.active {
-    visibility: initial;
-    width: 100%;
-    height: 100vh;
-    right: 100;
-    transition: 0.2s ease all;
-    background-color: rgba(110, 118, 129, 0.4);
-}
-
 /* MENU------------------------------------------------------- */
-.buttonOpenMenu {
+.buttonOpenMenu,
+.buttonCloseMenu {
     display: none;
 }
 
 .containerMenuMobile {
-    visibility: hidden;
-    position: fixed;
-    left: -200%;
-    z-index: 2;
-}
-
-.containerMenuMobile.active {
-    visibility: inherit;
-    position: fixed;
-    left: 0;
-}
-
-.buttonCloseMenu {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    top: 20px;
-    right: 20px;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.menuMobile {
-    width: 40%;
-    height: 100vh;
-    font-size: 14px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: fixed;
-    right: -100%;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    cursor: pointer;
-    color: #fff;
-    transition: 0.5s ease-in-out all;
-}
-
-.menuMobile.active {
-    top: 0;
-    right: 0;
-    transition: 0.5s ease all;
+    justify-content: center;
+    position: absolute;
+    top: -100%;
+    z-index: 2;
 }
 
 /* Estilos para pantallas de hasta 900px */
@@ -489,9 +440,58 @@ footer {
         display: none;
     }
 
-    .buttonOpenMenu {
-        width: 50px;
-        height: 50px;
+    .capa--opacity.active {
+        visibility: initial;
+        width: 100%;
+        height: 100vh;
+        right: 100;
+        transition: 0.2s ease all;
+        background-color: rgba(255, 255, 255, 0.077);
+    }
+
+    .menuMobile {
+        width: 90%;
+        height: max-content;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: -100%;
+        z-index: 1;
+        border-radius: 10px;
+        background: rgba(0, 157, 224, 0.649);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        cursor: pointer;
+        color: #fff;
+        padding: 0;
+        transition: 0.4s ease-in-out all;
+    }
+
+    .menuMobile.active {
+        top: 55px;
+        transition: 0.4s ease-in all;
+    }
+
+    .menuMobile a {
+        width: 100%;
+        height: 38px;
+        border-bottom: 1px solid rgba(255, 255, 255, .065);
+        padding: 0 10px;
+        text-align: start;
+        display: flex;
+        align-items: center;
+    }
+
+    .containerMenuMobile.active {
+        position: fixed;
+        top: 0;
+    }
+
+    .buttonOpenMenu,
+    .buttonCloseMenu {
+        width: 40px;
+        height: 40px;
         justify-self: end;
         display: block;
         background-color: rgba(0, 0, 0, 0.2);
@@ -506,6 +506,7 @@ footer {
         color: #fff;
         font-size: 24px;
         cursor: pointer;
+        line-height: 0.1;
         transition: 0.4s ease all;
     }
 
@@ -513,12 +514,18 @@ footer {
         top: -100%;
     }
 
-    .buttonOpenMenu:hover {
+    .buttonCloseMenu.inactive {
+        top: -100%;
+    }
+
+    .buttonOpenMenu:hover,
+    .buttonCloseMenu:hover {
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
     }
 
-    .buttonOpenMenu:focus {
+    .buttonOpenMenu:focus,
+    .buttonCloseMenu:focus {
         outline: none;
     }
 
@@ -551,6 +558,11 @@ footer {
 
     .signo {
         font-size: 60px;
+    }
+
+    /* Galería */
+    .imagen-port {
+        width: 90%;
     }
 }
 
@@ -587,11 +599,6 @@ footer {
     .contenedor-mision-vision img,
     .contenedor-propuesta img {
         width: 95%;
-    }
-
-    /* Galería */
-    .imagen-port {
-        width: 100%;
     }
 
     /* Footer */

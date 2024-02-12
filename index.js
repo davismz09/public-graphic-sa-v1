@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
         capa.classList.remove("active");
         openMenu.classList.remove("inactive");
         iconWhatsapp.classList.remove("inactive");
+        closeMenu.classList.remove("active");
+        closeMenu.classList.add("inactive");
       });
     });
   });
@@ -40,6 +42,8 @@ openMenu.addEventListener("click", () => {
   capa.classList.add("active");
   openMenu.classList.add("inactive");
   iconWhatsapp.classList.add("inactive");
+  closeMenu.classList.add("active");
+  closeMenu.classList.remove("inactive");
 });
 
 capa.addEventListener("click", () => {
@@ -48,6 +52,8 @@ capa.addEventListener("click", () => {
   capa.classList.remove("active");
   openMenu.classList.remove("inactive");
   iconWhatsapp.classList.remove("inactive");
+  closeMenu.classList.remove("active");
+  closeMenu.classList.add("inactive");
 });
 
 closeMenu.addEventListener("click", () => {
@@ -56,4 +62,6 @@ closeMenu.addEventListener("click", () => {
   capa.classList.remove("active");
   openMenu.classList.remove("inactive");
   iconWhatsapp.classList.remove("inactive");
+  closeMenu.classList.remove("active");
+  closeMenu.classList.add("inactive");
 });
