@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'Nexa';
+    src: url('../fonts/TTF/NexaDemo-Bold.ttf') format('ttf');
+    /* Agrega otros formatos de fuente si es necesario */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    /* Formato WOFF2 */
+    src: url('../fonts/TTF/NexaDemo-Light.ttf') format('ttf');
+    /* Formato WOFF */
+    /* Agrega otros formatos de fuente si es necesario */
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Nexa', sans-serif;
+    /* Usa la fuente Nexa en tu página */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +28,8 @@
 }
 
 body {
-    font-family: 'open sans';
+    font-family: 'Nexa', sans-serif;
+    color: rgb(60, 60, 62);
 }
 
 .contenedor {
@@ -61,6 +85,7 @@ header {
     background: -webkit-linear-gradient(to right, hsla(340, 4%, 27%, 0.459), hsla(180, 4%, 27%, 0.664)), url(../img/portada.jpg);
     background: linear-gradient(to right, hsla(340, 4%, 27%, 0.459), hsla(180, 4%, 27%, 0.664)), url(../img/portada.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
     padding-top: 10px;
@@ -216,6 +241,7 @@ main .sobre-nosotros {
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    border-radius: 15px;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
 }
 
@@ -227,8 +253,22 @@ main .sobre-nosotros {
     text-transform: uppercase;
 }
 
-.list-galeria {
+.textos-galeria {
+    width: 100%;
+    display: flex;
+    line-height: 1.2;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.textos-galeria h3 {
     text-align: center;
+    font-size: 16px;
+}
+
+.list-galeria {
+    align-self: start;
+    text-align: left;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -497,7 +537,7 @@ footer {
 
     .contenedor-mision-vision img,
     .contenedor-propuesta img {
-        width: 1%;
+        width: 95%;
     }
 
     .sobre-nosotros .titulo {
@@ -551,7 +591,7 @@ footer {
 
     /* Galería */
     .imagen-port {
-        width: 95%;
+        width: 100%;
     }
 
     /* Footer */
