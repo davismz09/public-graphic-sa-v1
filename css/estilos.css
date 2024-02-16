@@ -315,9 +315,6 @@ footer {
     flex-direction: column;
     background: rgb(241, 76, 232);
     background: linear-gradient(0deg, rgba(241, 76, 232, 1) 13%, rgba(149, 149, 201, 1) 56%, rgba(26, 207, 244, 1) 78%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 footer img {
@@ -346,8 +343,6 @@ footer img {
 .contenedor-footer>a {
     width: max-content;
     height: max-content;
-    white-space: nowrap;
-    word-wrap: break-word;
     background-color: white;
     color: rgb(75, 70, 117);
     text-decoration: none;
