@@ -10,17 +10,19 @@
     <title>Publicgraphic S.A.S - Especialistas en Identidad de Marca y Promoción</title>
     <link rel="shortcut icon" href="" type="image/x-icon"> <!-- colocar icono -->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header id="inicio">
+    <header id="inicio" class="header">
         <nav class="menu">
             <a href="#inicio">Inicio</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#servicios">Servicios</a>
             <a href="#contacto">Contactos</a>
         </nav>
+        <img class="logo_inicio" src="./img/logo_inicio.webp" alt="Logo de la página">
 
         <!-- MENU MOBILE -->
         <div id="capaOpacity" class="capa--opacity"></div>
@@ -35,11 +37,6 @@
                 <a href="#contacto">Contacto</a>
             </nav>
         </div>
-
-        <section class="textos-header">
-            <h1>Public</h1>
-            <h2>Graphic S.A.S</h2>
-        </section>
         <div class="wave" style="height: 150px; overflow: hidden;">
             <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
@@ -58,12 +55,12 @@
                 <div class="contenido-textos">
                     <div class="contenedor-mision-vision">
                         <div>
-                            <h3><span>1</span>Misión</h3>
+                            <h3>Misión</h3>
                             <p>
                                 Acompañar a nuestros clientes en el desarrollo de propuestas de promoción de sus
                                 productos, enriquecimiento de imagen corporativa para empresas, de branding de marca.
                             </p>
-                            <h3><span>2</span>Visión</h3>
+                            <h3>Visión</h3>
                             <p>
                                 Ser reconocidos por nuestros clientes y por el mercado como la empresa que brinda el
                                 mejor
@@ -76,7 +73,7 @@
                     </div>
                     <div class="contenedor-propuesta">
                         <div>
-                            <h3><span>3</span>Propuesta de valor</h3>
+                            <h3>Propuesta de valor</h3>
                             <p>
                                 Public Graphic S.A.S nace después de 8 años de experiencia en esta línea por parte de
                                 sus
@@ -100,151 +97,76 @@
         </section>
         <section class="portafolio" id="servicios">
             <div class="contenedor">
-                <h2 class="titulo-servicios">NUESTROS SERVICIOS</h2>
+                <img class="img1" src="./img/esquineras1.png" alt="Esquineras">
+                <img class="img2" src="./img/esquineras2.png" alt="Esquineras">
+                <div class="seccion-servicios">
+                    <h2 class="titulo-servicios">NUESTROS SERVICIOS</h2>
+                    <a href="./productos.html" target="_blank">Ir a nuestros servicios</a>
+                </div>
                 <div class="galeria-port">
                     <div class="container-imagen-port">
                         <div class="imagen-port">
-                            <img src="img/img1.jpg" alt="">
-                            <div class="hover-galeria">
-                                <img src="img/icono1.png" alt="">
-                                <p>Nuestro trabajo</p>
-                            </div>
+                            <img src="img/1.webp" alt="">
                         </div>
                         <div class="textos-galeria">
                             <h3>Promocionales</h3>
-                            <ul class="list-galeria">
-                                <li>Lineas</li>
-                                <li>Bamboo</li>
-                                <li>Ecología</li>
-                                <li>Corcho</li>
-                                <li>Kraft</li>
-                            </ul>
                         </div>
                     </div>
 
                     <div class="container-imagen-port">
                         <div class="imagen-port">
-                            <img src="img/img1.jpg" alt="">
-                            <div class="hover-galeria">
-                                <img src="img/icono1.png" alt="">
-                                <p>Nuestro trabajo</p>
-                            </div>
+                            <img src="img/2.webp" alt="">
                         </div>
                         <div class="textos-galeria">
                             <h3>Material p.o.p</h3>
-                            <ul class="list-galeria">
-                                <li>Agendas</li>
-                                <li>Boligrafos</li>
-                                <li>Termos</li>
-                                <li>Camisas</li>
-                                <li>Jarros</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="container-imagen-port">
                         <div class="imagen-port">
-                            <img src="img/img1.jpg" alt="">
-                            <div class="hover-galeria">
-                                <img src="img/icono1.png" alt="">
-                                <p>Nuestro trabajo</p>
-                            </div>
+                            <img src="img/3.webp" alt="">
                         </div>
                         <div class="textos-galeria">
                             <h3>Branding</h3>
-                            <ul class="list-galeria">
-                                <li>Carros</li>
-                                <li>Furgonetas</li>
-                                <li>Mamparas (Parcial Completo)</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="container-imagen-port">
                         <div class="imagen-port">
-                            <img src="img/img1.jpg" alt="">
-                            <div class="hover-galeria">
-                                <img src="img/icono1.png" alt="">
-                                <p>Nuestro trabajo</p>
-                            </div>
+                            <img src="img/4.webp" alt="">
                         </div>
                         <div class="textos-galeria">
                             <h3>Diseños</h3>
-                            <ul class="list-galeria">
-                                <li>Logos</li>
-                                <li>Campañas</li>
-                                <li>Manuales</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="container-imagen-port">
                         <div class="imagen-port">
-                            <img src="img/img1.jpg" alt="">
-                            <div class="hover-galeria">
-                                <img src="img/icono1.png" alt="">
-                                <p>Nuestro trabajo</p>
-                            </div>
+                            <img src="img/5.webp" alt="">
                         </div>
                         <div class="textos-galeria">
                             <h3>Papeleria</h3>
-                            <ul class="list-galeria">
-                                <li>Calendarios</li>
-                                <li>Tarjetas</li>
-                                <li>Revistas</li>
-                                <li>Agendas</li>
-                                <li>Recetarios</li>
-                                <li>Volantes</li>
-                                <li>Tripticos</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="container-imagen-port">
                         <div class="imagen-port">
-                            <img src="img/img1.jpg" alt="">
-                            <div class="hover-galeria">
-                                <img src="img/icono1.png" alt="">
-                                <p>Nuestro trabajo</p>
-                            </div>
+                            <img src="img/6.webp" alt="">
                         </div>
                         <div class="textos-galeria">
                             <h3>Sublimacion</h3>
-                            <ul class="list-galeria">
-                                <li>Bordado</li>
-                                <li>Serigrafia</li>
-                                <li>Estampado</li>
-                                <li>Camisas</li>
-                                <li>Mochilas</li>
-                                <li>Jarros</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="container-imagen-port">
                         <div class="imagen-port">
-                            <img src="img/img1.jpg" alt="">
-                            <div class="hover-galeria">
-                                <img src="img/icono1.png" alt="">
-                                <p>Nuestro trabajo</p>
-                            </div>
+                            <img src="img/7.webp" alt="">
                         </div>
                         <div class="textos-galeria">
                             <h3>Uniformes</h3>
-                            <ul class="list-galeria">
-                                <li>Industrial</li>
-                                <li>Medico</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="container-imagen-port">
                         <div class="imagen-port">
-                            <img src="img/img1.jpg" alt="">
-                            <div class="hover-galeria">
-                                <img src="img/icono1.png" alt="">
-                                <p>Nuestro trabajo</p>
-                            </div>
+                            <img src="img/8.webp" alt="">
                         </div>
                         <div class="textos-galeria">
                             <h3>Impresión</h3>
-                            <ul class="list-galeria">
-                                <li>Stickers</li>
-                            </ul>
                         </div>
                     </div>
 
@@ -253,10 +175,11 @@
         </section>
     </main>
     <footer id="contacto">
+        <img src="./img/logo.webp" alt="Logotipo">
         <div class="contenedor-footer">
             <a href="#">Nuestras redes sociales</a>
+            <h2 class="titulo-final">&copy; 2024</h2>
         </div>
-        <h2 class="titulo-final">&copy; PUBLIC GRAPHIC</h2>
     </footer>
     <div class="whatsapp-icon">
         <a href="https://wa.me/123" target="_blank">
