@@ -215,6 +215,10 @@
         font-size: 20px;
     }
 
+    footer {
+        height: 300px;
+    }
+
     footer img {
         width: 200px;
         height: 250px;
