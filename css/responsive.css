@@ -32,12 +32,6 @@
     .imagen-port {
         width: 44%;
     }
-
-    .contenedor-footer {
-        flex-direction: column;
-        justify-content: center;
-        border: none;
-    }
 }
 
 /* Estilos para pantallas de hasta 768px */
@@ -219,7 +213,7 @@
         height: 300px;
     }
 
-    footer img {
+    footer::before {
         width: 200px;
         height: 250px;
     }

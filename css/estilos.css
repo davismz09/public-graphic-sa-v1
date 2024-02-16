@@ -313,18 +313,25 @@ footer {
     position: relative;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(0deg, rgba(241, 76, 232, 1), rgba(149, 149, 201, 1), rgba(26, 207, 244, 1)); 
+    background: linear-gradient(0deg, rgba(241, 76, 232, 1), rgba(149, 149, 201, 1), rgba(26, 207, 244, 1));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-footer img {
+footer::before {
+    content: "";
+    background-image: url('../img/logo.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 350px;
     height: 400px;
-    object-fit: cover;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 0;
-    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .contenedor-footer {
@@ -333,9 +340,10 @@ footer img {
     height: 100%;
     flex-direction: column;
     position: relative;
-    z-index: 1;
+    z-index: 999;
     justify-content: center;
     align-items: center;
+    border: none;
     margin: auto;
 }
 
