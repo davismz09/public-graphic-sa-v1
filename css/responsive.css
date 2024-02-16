@@ -50,7 +50,7 @@
         visibility: initial;
         width: 100%;
         height: 100vh;
-        right: 100;
+        right: 0;
         transition: 0.2s ease all;
         background-color: rgba(255, 255, 255, 0.077);
     }
@@ -266,14 +266,3 @@
         width: 20%;
     }
 }
-
-/* @media screen and (min-width: 1024px) {
-    .container-imagen-port {
-        width: 20%;
-    }
-
-    .menu {
-        gap: 130px;
-        padding-right: 130px;
-    }
-} */
