@@ -6,62 +6,43 @@ const containerMenu = document.querySelector(".containerMenuMobile");
 const menuMobile = document.querySelector(".menuMobile");
 const iconWhatsapp = document.querySelector(".whatsapp-icon");
 
+// Función para controlar el menú móvil
+function toggleMenu() {
+  containerMenu.classList.toggle("active");
+  menuMobile.classList.toggle("active");
+  capa.classList.toggle("active");
+  openMenu.classList.toggle("inactive");
+  iconWhatsapp.classList.toggle("inactive");
+  closeMenu.classList.toggle("active");
+  closeMenu.classList.toggle("inactive");
+}
+
+// Función para cerrar el menú al hacer clic en un enlace
+function closeMenuOnClick() {
+  const menuMobiles = document.querySelectorAll(".menuMobile");
+  menuMobiles.forEach((menuMobile) => {
+    containerMenu.classList.remove("active");
+    menuMobile.classList.remove("active");
+    capa.classList.remove("active");
+    openMenu.classList.remove("inactive");
+    iconWhatsapp.classList.remove("inactive");
+    closeMenu.classList.remove("active");
+    closeMenu.classList.add("inactive");
+  });
+}
+
+// Evento para hacer scroll suave al hacer clic en un enlace interno
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
     });
+    closeMenuOnClick();
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".menuMobile a");
-
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
-      // Remover la clase "active" de todos los elementos .menuMobile
-      const menuMobiles = document.querySelectorAll(".menuMobile");
-      menuMobiles.forEach((menuMobile) => {
-        containerMenu.classList.remove("active");
-        menuMobile.classList.remove("active");
-        capa.classList.remove("active");
-        openMenu.classList.remove("inactive");
-        iconWhatsapp.classList.remove("inactive");
-        closeMenu.classList.remove("active");
-        closeMenu.classList.add("inactive");
-      });
-    });
-  });
-});
-
-openMenu.addEventListener("click", () => {
-  containerMenu.classList.add("active");
-  menuMobile.classList.add("active");
-  capa.classList.add("active");
-  openMenu.classList.add("inactive");
-  iconWhatsapp.classList.add("inactive");
-  closeMenu.classList.add("active");
-  closeMenu.classList.remove("inactive");
-});
-
-capa.addEventListener("click", () => {
-  containerMenu.classList.remove("active");
-  menuMobile.classList.remove("active");
-  capa.classList.remove("active");
-  openMenu.classList.remove("inactive");
-  iconWhatsapp.classList.remove("inactive");
-  closeMenu.classList.remove("active");
-  closeMenu.classList.add("inactive");
-});
-
-closeMenu.addEventListener("click", () => {
-  containerMenu.classList.remove("active");
-  menuMobile.classList.remove("active");
-  capa.classList.remove("active");
-  openMenu.classList.remove("inactive");
-  iconWhatsapp.classList.remove("inactive");
-  closeMenu.classList.remove("active");
-  closeMenu.classList.add("inactive");
-});
+// Eventos para abrir y cerrar el menú
+openMenu.addEventListener("click", toggleMenu);
+closeMenu.addEventListener("click", toggleMenu);
+capa.addEventListener("click", toggleMenu);
