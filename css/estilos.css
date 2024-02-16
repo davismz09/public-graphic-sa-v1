@@ -313,7 +313,6 @@ footer {
     position: relative;
     display: flex;
     flex-direction: column;
-    background: rgb(241, 76, 232);
     background: linear-gradient(0deg, rgba(241, 76, 232, 1), rgba(149, 149, 201, 1), rgba(26, 207, 244, 1)); 
 }
 
